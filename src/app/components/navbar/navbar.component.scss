@@ -1,0 +1,11 @@
+.navbar {
+  &-container {
+    background-color: rgb(9, 71, 129);
+    max-width: 100vw;
+    height: 30px;
+    position: sticky;
+  }
+  &-button {
+    background-color: red;
+  }
+}

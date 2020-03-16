@@ -1,0 +1,8 @@
+<div class="navbar navbar-container">
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu" class="navbar navbar-button">
+    <button mat-menu-item [routerLink]="''">Home</button>
+    <button mat-menu-item [routerLink]="'dashboard'">DashBoard</button>
+    <button mat-menu-item [routerLink]="'signin'">Sign IN</button>
+  </mat-menu>
+</div>

@@ -1,0 +1,43 @@
+<div class="signin signin-container">
+  <mat-card class="signin signin-loginBlock">
+    <mat-card-title>Sign IN</mat-card-title>
+    <mat-card-content class="navbar navbar-input">
+      <form
+        class="example-form"
+        [formGroup]="form"
+        (ngSubmit)="onSubmit()"
+        class="example-form"
+        novalidate
+      >
+        <mat-form-field class="navbar navbar-input-item">
+          <mat-label>Email</mat-label>
+          <input
+            type="email"
+            formControlName="email"
+            matInput
+            placeholder="john.doe@free.fr"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="navbar navbar-input-item">
+          <mat-label>Password</mat-label>
+          <input
+            type="password"
+            formControlName="password"
+            matInput
+            placeholder="Password"
+          />
+        </mat-form-field>
+        <button
+          color="primary"
+          type="submit"
+          mat-raised-button
+          color="secondary"
+          [disabled]="!form.valid"
+        >
+          Signin
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
