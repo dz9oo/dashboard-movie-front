@@ -1,0 +1,16 @@
+<div class="card card-container">
+  <h2 class="card-title">{{ title }}</h2>
+  <ul>
+    <div *ngFor="let item of items">
+      <li class="card-item">
+        <span class="card-item-title">
+          {{ item.film }}
+        </span>
+        <span class="card-item-year">
+          {{ item.annee }}
+        </span>
+      </li>
+      <mat-divider></mat-divider>
+    </div>
+  </ul>
+</div>

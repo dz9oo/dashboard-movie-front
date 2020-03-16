@@ -2,6 +2,24 @@
   &-container {
     background-color: rgba(22, 4, 63, 0.795);
     max-width: 100vw;
+    max-height: 100vh;
+    display: flex;
+  }
+}
+
+.card {
+  &-films {
+    width: 30vw;
     height: 100vh;
+    background-color: red;
+  }
+  &-diag {
+    width: 25vw;
+  }
+  &-actrices {
+    width: 25vw;
+  }
+  &-acteurs {
+    width: 25vw;
   }
 }
