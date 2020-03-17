@@ -8,7 +8,7 @@ import { MovieModel } from "src/app/models/movie.model";
   styleUrls: ["./card.component.scss"]
 })
 export class CardComponent implements OnInit {
-  @Input() items: MovieModel[];
+  @Input() item: MovieModel;
   @Input() title: string;
   @Input() description: string;
   @Input() year: number;

@@ -12,9 +12,8 @@ export class DashboardComponent implements OnInit {
   constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {
-    this.movieService
-      .getMovies()
-      .subscribe((data: MovieModel[]) => (this.movies = data));
-    console.log(this.movies[0].title);
+    // this.movieService
+    //   .getMovies()
+    //   .subscribe((data: MovieModel[]) => (this.movies = data));
   }
 }

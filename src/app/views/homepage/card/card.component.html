@@ -1,34 +1,14 @@
-<div class="card card-container">
-  <mat-card class="card-item">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>
-        <div class="card-title-container">
-          <div class="card-title-name">
-            {{ title }}
-          </div>
-          <div class="card-title-year">
-            {{ year }}
-          </div>
-        </div>
-      </mat-card-title>
-      <mat-card-subtitle>
-        Acteurs ici
-      </mat-card-subtitle>
-    </mat-card-header>
-    <img
-      mat-card-image
-      src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-      alt="Photo of a Shiba Inu"
-    />
-    <mat-card-content>
-      <p>
-        {{ description }}
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+<div class="card" style="width: 18rem;">
+  <img src="{{ picture }}" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <div class="card-title">
+      <h2 class="card-title-name">
+        {{ title }}
+      </h2>
+      <div class="card-title-year">
+        {{ year }}
+      </div>
+    </div>
+    <p class="card-text">{{ description }}</p>
+  </div>
 </div>

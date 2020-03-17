@@ -1,23 +1,12 @@
+$dashboardColorBackground: #5e51d1;
 .card {
-  &-container {
-    max-width: 100vw;
-  }
-  &-item {
-    max-width: 100vw;
-  }
-  &-year {
-    display: block;
-    float: right;
-    text-align: right;
-  }
-
+  background: none;
+  color: white;
   &-title {
-    &-container {
-      display: flex;
-      justify-content: space-between;
-    }
+    display: flex;
+    justify-content: space-between;
     &-name {
-      color: red;
+      color: $dashboardColorBackground;
     }
     &-year {
       color: royalblue;

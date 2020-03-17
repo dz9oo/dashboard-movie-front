@@ -1,9 +1,10 @@
 <div class="homepage homepage-container">
-  <app-card
-    *ngFor="let movie of movies"
-    class="homepage-card"
-    title="{{ movie.title }}"
-    description="{{ movie.description }}"
-    year="{{ movie.year }}"
-  ></app-card>
+  <div *ngFor="let movie of movies" class="homepage-card">
+    <app-card
+      title="{{ movie.title }}"
+      description="{{ movie.description }}"
+      year="{{ movie.year }}"
+      picture="{{ movie.picture }}"
+    ></app-card>
+  </div>
 </div>
