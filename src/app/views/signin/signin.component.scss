@@ -1,24 +1,48 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+$dashboardColorBackground: #151138;
+$dashboardColorItem: #2d294c;
+
 .signin {
+  color: white;
+
   &-container {
-    background-color: rgba(22, 4, 63, 0.795);
+    background-color: $dashboardColorBackground;
     max-width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  &-loginBlock {
-    max-width: 30vw;
-    height: 40vh;
-    align-self: center;
-  }
-  &-input {
-    display: flex;
-    align-items: stretch;
-    &-item {
-      flex-grow: 1;
-      width: 100%;
+  &-card {
+    background-color: $dashboardColorItem;
+    border-radius: 10px;
+    width: 25vw;
+    height: 35vh;
+    padding: 0 8px;
+    &-title {
+      text-align: center;
+      margin-top: 10px;
+    }
+    &-form {
+      display: flex;
+      flex-direction: column;
+      &-label {
+        margin: 10px 0;
+      }
+      &-input {
+        color: white;
+        background-color: $dashboardColorBackground;
+        border: 0.5px solid $dashboardColorBackground;
+        border-radius: 4px;
+      }
+      &-submit {
+        margin-top: 20px;
+      }
     }
   }
 }
