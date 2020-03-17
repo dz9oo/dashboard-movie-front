@@ -1,25 +1,84 @@
-.dashboard {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+$dashboardColorBackground: #151138;
+$dashboardColorItem: #2d294c;
+
+.grid {
   &-container {
-    background-color: rgba(22, 4, 63, 0.795);
-    max-width: 100vw;
-    max-height: 100vh;
-    display: flex;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 30% auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    background-color: $dashboardColorBackground;
+    padding: 10px;
+    grid-template-areas:
+      "CardlistCol CardDiag CardF CardM"
+      "CardlistCol CardHisto CardHisto CardBar"
+      "CardlistCol CardHisto CardHisto CardMean";
+  }
+  &-item {
+    background-color: $dashboardColorItem;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    &-listCol {
+      grid-area: CardlistCol;
+    }
+    &-diag {
+      grid-area: CardDiag;
+    }
+    &-cardF {
+      grid-area: CardF;
+    }
+    &-cardM {
+      grid-area: CardM;
+    }
+    &-histo {
+      grid-area: CardHisto;
+    }
+    &-bar {
+      grid-area: CardBar;
+    }
+    &-mean {
+      grid-area: CardMean;
+    }
   }
 }
 
-.card {
-  &-films {
-    width: 30vw;
+$grid-gutter-width: 50px !default;
+
+.dashboard {
+  max-width: 100vw;
+  height: 100vh;
+}
+
+.test {
+  border-radius: 12px;
+  border: 1px solid black;
+  // margin: 5px 5px;
+  &-col {
     height: 100vh;
-    background-color: red;
+    background-color: pink;
   }
-  &-diag {
-    width: 25vw;
+  &-bar {
+    background-color: purple;
   }
-  &-actrices {
-    width: 25vw;
+  &-card {
+    height: 30vh;
+    background-color: royalblue;
   }
-  &-acteurs {
-    width: 25vw;
+  &-square {
+    background-color: royalblue;
+    height: 100%;
+  }
+  &-histo {
+    background-color: yellowgreen;
   }
 }

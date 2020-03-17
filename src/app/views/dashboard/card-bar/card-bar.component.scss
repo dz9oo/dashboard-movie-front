@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.card {
+  color: black;
+  &-container {
+    background-color: white;
+    border-radius: 10px;
+  }
+}
