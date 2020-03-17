@@ -4,12 +4,13 @@
 }
 .card {
   color: white;
+  max-width: 100vw;
   & li {
     list-style: none;
   }
   &-container {
-    background-color: royalblue;
-    border-radius: 10px;
+    background: none;
+    // border-radius: 10px;
   }
   &-title {
     text-align: center;
@@ -18,9 +19,14 @@
     display: flex;
     justify-content: space-between;
     margin: 5px 10px;
+    color: white;
+    font-size: 0.8rem;
     &-title {
     }
     &-year {
+    }
+    &-div {
+      background-color: white;
     }
   }
 }

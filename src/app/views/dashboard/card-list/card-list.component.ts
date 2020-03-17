@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
+import { MovieModel } from "src/app/models/movie.model";
+import { MovieService } from "src/app/services/movie.service";
 
 @Component({
   selector: "app-card-list",
@@ -8,29 +10,31 @@ import { Component, OnInit, Input } from "@angular/core";
 export class CardListComponent implements OnInit {
   @Input()
   title: string;
+  @Input()
+  year: number;
 
-  films = [
-    "Dofus-Livre 1 : Julith",
-    "Bienvenue chez les Chtis",
-    "la grande vadrouille"
-  ];
-  items = [
-    {
-      film: "Dofus-Livre 1 : Julith",
-      annee: "2015"
-    },
-    {
-      film: "Bienvenue chez les Chtis",
-      annee: "2013"
-    },
-    {
-      film: "la grande vadrouille",
-      annee: "2000"
-    }
-  ];
-  annees = ["2015", "1900", "1990"];
+  @Input() items: MovieModel[];
 
-  constructor() {}
+  // items = [
+  //   {
+  //     title: "Dofus-Livre 1 : Julith",
+  //     year: "2015"
+  //   },
+  //   {
+  //     title: "Bienvenue chez les Chtis",
+  //     year: "2013"
+  //   },
+  //   {
+  //     title: "la grande vadrouille",
+  //     year: "2000"
+  //   }
+  // ];
 
-  ngOnInit(): void {}
+  constructor(private movieService: MovieService) {}
+
+  ngOnInit(): void {
+    this.movieService
+      .getMovies()
+      .subscribe((data: MovieModel[]) => (this.items = data));
+  }
 }
