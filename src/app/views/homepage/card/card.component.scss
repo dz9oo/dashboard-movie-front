@@ -1,0 +1,27 @@
+.card {
+  &-container {
+    max-width: 100vw;
+  }
+  &-item {
+    max-width: 100vw;
+  }
+  &-year {
+    display: block;
+    float: right;
+    text-align: right;
+  }
+
+  &-title {
+    &-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-name {
+      color: red;
+      flex: 2;
+    }
+    &-year {
+      color: royalblue;
+    }
+  }
+}

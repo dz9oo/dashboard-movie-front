@@ -22,6 +22,7 @@ import { CardListComponent } from "./views/dashboard/card-list/card-list.compone
 import { CardHistoComponent } from "./views/dashboard/card-histo/card-histo.component";
 import { CardBarComponent } from "./views/dashboard/card-bar/card-bar.component";
 import { CardDiagramComponent } from "./views/dashboard/card-diagram/card-diagram.component";
+import { CardComponent } from './views/homepage/card/card.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CardDiagramComponent } from "./views/dashboard/card-diagram/card-diagra
     CardListComponent,
     CardHistoComponent,
     CardBarComponent,
-    CardDiagramComponent
+    CardDiagramComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
