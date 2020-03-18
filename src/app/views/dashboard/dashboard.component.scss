@@ -42,6 +42,8 @@ $dashboardColorItem: #2d294c;
     }
     &-histo {
       grid-area: CardHisto;
+      // display: flex;
+      // justify-content: center;
     }
     &-bar {
       grid-area: CardBar;

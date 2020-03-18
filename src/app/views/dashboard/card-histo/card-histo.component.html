@@ -1,3 +1,18 @@
-<div class="card card-container">
+<section class="card card-container">
   <h2 class="card card-title">{{ title }}</h2>
-</div>
+  <div>
+    <div>
+      <div style="display: block">
+        <canvas
+          baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [legend]="barChartLegend"
+          [chartType]="barChartType"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
+</section>
