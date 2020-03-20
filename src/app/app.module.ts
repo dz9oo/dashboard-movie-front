@@ -24,6 +24,8 @@ import { CardHistoComponent } from "./views/dashboard/card-histo/card-histo.comp
 import { CardBarComponent } from "./views/dashboard/card-bar/card-bar.component";
 import { CardDiagramComponent } from "./views/dashboard/card-diagram/card-diagram.component";
 import { CardComponent } from "./views/homepage/card/card.component";
+import { CardActorComponent } from './views/dashboard/card-actor/card-actor.component';
+import { CardMeanComponent } from './views/dashboard/card-mean/card-mean.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { CardComponent } from "./views/homepage/card/card.component";
     CardHistoComponent,
     CardBarComponent,
     CardDiagramComponent,
-    CardComponent
+    CardComponent,
+    CardActorComponent,
+    CardMeanComponent
   ],
   imports: [
     BrowserModule,

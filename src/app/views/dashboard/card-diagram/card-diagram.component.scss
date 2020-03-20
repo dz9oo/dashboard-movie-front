@@ -1,8 +1,14 @@
+$dashboardColorItem: #2d294c;
 .card {
   color: white;
+  border: none;
   &-container {
-    max-width: 100vw;
-    max-height: 100vh;
-    background-color: royalblue;
+    max-width: 100%;
+    height: 100%;
+    background-color: $dashboardColorItem;
+  }
+  &-title {
+    padding-top: 10px;
+    background-color: $dashboardColorItem;
   }
 }

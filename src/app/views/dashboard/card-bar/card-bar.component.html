@@ -1,4 +1,19 @@
 <div class="card card-container">
-  <h2>{{ title }}</h2>
-  <canvas id="myChart" width="400" height="400"></canvas>
+  <h2 class="card card-title">{{ title }}</h2>
+  <div>
+    <div>
+      <div>
+        <canvas
+          baseChart
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [plugins]="barChartPlugins"
+          [legend]="barChartLegend"
+          [chartType]="barChartType"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
 </div>

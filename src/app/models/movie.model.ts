@@ -7,6 +7,7 @@ export class MovieModel {
   year: number;
   picture: string;
   score: number;
+  duration: number;
   genreId: number;
   createdAt: Date = new Date();
   updatedAt: Date = new Date();

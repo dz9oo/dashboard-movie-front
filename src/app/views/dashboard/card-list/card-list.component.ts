@@ -15,26 +15,11 @@ export class CardListComponent implements OnInit {
 
   @Input() items: MovieModel[];
 
-  // items = [
-  //   {
-  //     title: "Dofus-Livre 1 : Julith",
-  //     year: "2015"
-  //   },
-  //   {
-  //     title: "Bienvenue chez les Chtis",
-  //     year: "2013"
-  //   },
-  //   {
-  //     title: "la grande vadrouille",
-  //     year: "2000"
-  //   }
-  // ];
-
   constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {
-    this.movieService
-      .getMovies()
-      .subscribe((data: MovieModel[]) => (this.items = data));
+    // this.movieService
+    //   .getMovies()
+    //   .subscribe((data: MovieModel[]) => (this.items = data));
   }
 }

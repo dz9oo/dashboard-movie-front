@@ -1,15 +1,38 @@
-<div class="grid-container">
+<div class="grid grid-container">
   <div class="grid-item grid-item-listCol">
-    <app-card-list title="Liste des films"></app-card-list>
+    <app-card-list [items]="movies" title="Liste des films"></app-card-list>
   </div>
-  <div class="grid-item grid-item-diag">2</div>
-  <div class="grid-item grid-item-cardF">3</div>
-  <div class="grid-item grid-item-cardM">4</div>
+  <div class="grid-item grid-item-diag">
+    <app-card-diagram
+      title="Répartition Femme-Homme"
+      actorFemaleList="actorFemale"
+      actorMaleList="actorMale"
+    ></app-card-diagram>
+  </div>
+  <div class="grid-item grid-item-cardF">
+    <app-card-actor
+      title="Actrices les plus vues"
+      [items]="actorFemaleMostView"
+    ></app-card-actor>
+  </div>
+  <div class="grid-item grid-item-cardM">
+    <app-card-actor
+      title="Acteurs les plus vus"
+      [items]="actorMaleMostView"
+    ></app-card-actor>
+  </div>
   <div class="grid-item grid-item-histo">
     <app-card-histo
       title="Production de films suivant les années"
     ></app-card-histo>
   </div>
-  <div class="grid-item grid-item-bar">6</div>
-  <div class="grid-item grid-item-mean">7</div>
+  <div class="grid-item grid-item-bar">
+    <app-card-bar title="Classement des catégories"></app-card-bar>
+  </div>
+  <div class="grid-item grid-item-mean">
+    <app-card-mean
+      title="Durée moyenne"
+      [meanDuration]="meanDurationMovies"
+    ></app-card-mean>
+  </div>
 </div>

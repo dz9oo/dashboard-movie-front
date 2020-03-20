@@ -1,3 +1,17 @@
 <div class="card card-container">
   <h2 class="card card-title">{{ title }}</h2>
+
+  <div>
+    <div>
+      <div>
+        <canvas
+          baseChart
+          [data]="doughnutChartData"
+          [labels]="doughnutChartLabels"
+          [chartType]="doughnutChartType"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
 </div>

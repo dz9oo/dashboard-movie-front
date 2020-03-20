@@ -1,6 +1,7 @@
 $dashboardColorItem: #2d294c;
 .card {
   color: white;
+  border: none;
   &-container {
     max-width: 100%;
     height: 100%;
@@ -8,7 +9,13 @@ $dashboardColorItem: #2d294c;
   }
   &-title {
     padding-top: 10px;
-    padding-bottom: 90px;
     background-color: $dashboardColorItem;
   }
+}
+
+canvas {
+  max-width: 50vw;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
