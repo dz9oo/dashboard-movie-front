@@ -5,6 +5,11 @@ import { ActorService } from "src/app/services/actor.service";
 import { ActorModel } from "src/app/models/actor.model";
 import { NumberValueAccessor } from "@angular/forms";
 
+type HistoData = {
+  listYear: number[];
+  countYear: number[];
+};
+
 @Component({
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
@@ -12,23 +17,26 @@ import { NumberValueAccessor } from "@angular/forms";
 })
 export class DashboardComponent implements OnInit {
   public movies: MovieModel[];
+
   meanDurationMovies: number = 0;
   actorFemale: ActorModel[];
   actorMale: ActorModel[];
   actorFemaleMostView: ActorModel[];
   actorMaleMostView: ActorModel[];
+  listYearCount: HistoData;
+  // listYear = ["2000", "2020", "2001", "2002", "2003", "2050", "2070", "2099"];
+  // countYear: number[] = [1, 2, 2, 1, 2, 1, 3, 1].map(elem => elem * 2);
+  listYear = [];
+  countYear = [];
   constructor(
     private movieService: MovieService,
     private actorService: ActorService
   ) {
-    this.movieService
-      .getMovies()
-      .subscribe(
-        (data: MovieModel[]) => (
-          (this.movies = data),
-          (this.meanDurationMovies = this.getMeanDurationMovie(data))
-        )
-      );
+    this.movieService.getMovies().subscribe((data: MovieModel[]) => {
+      (this.movies = data),
+        (this.meanDurationMovies = this.getMeanDurationMovie(data)),
+        this.getMoviePerYear(data);
+    });
 
     this.actorService
       .getActorsFemale()
@@ -56,5 +64,30 @@ export class DashboardComponent implements OnInit {
     });
     mean /= movies.length;
     return Math.round(mean);
+  }
+
+  getMoviePerYear(movies: MovieModel[]) {
+    let setYear = new Set();
+    movies.forEach(movie => {
+      setYear.add(movie.year);
+    });
+    let listYear: any = [...setYear].sort();
+
+    let countYear = Array(listYear.length).fill(0);
+    movies.forEach(movie => {
+      countYear[listYear.indexOf(movie.year)] += 1;
+    });
+
+    this.countYear = [
+      {
+        data: countYear,
+        backgroundColor: "#2f82ff"
+      }
+    ];
+    this.listYear = listYear;
+
+    // return { listYear, countYear };
+    // let res: HistoData = { listYear, countYear };
+    // return res;
   }
 }

@@ -23,6 +23,11 @@
   </div>
   <div class="grid-item grid-item-histo">
     <app-card-histo
+      [listYearCount]="listYearCount"
+      [countYear]="countYear"
+      [listYear]="listYear"
+      [barChartData]="countYear"
+      [barChartLabels]="listYear"
       title="Production de films suivant les années"
     ></app-card-histo>
   </div>
