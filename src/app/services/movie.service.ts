@@ -28,7 +28,7 @@ export class MovieService {
 
   update(movie: MovieModel): Observable<MovieModel> {
     return this.http.post<MovieModel>(
-      `http://localhost:3000/users/${movie.id}`,
+      `http://localhost:3000/movies/${movie.id}`,
       movie
     );
   }

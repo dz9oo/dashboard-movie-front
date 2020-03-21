@@ -23,16 +23,17 @@
   </div>
   <div class="grid-item grid-item-histo">
     <app-card-histo
-      [listYearCount]="listYearCount"
-      [countYear]="countYear"
-      [listYear]="listYear"
       [barChartData]="countYear"
       [barChartLabels]="listYear"
       title="Production de films suivant les années"
     ></app-card-histo>
   </div>
   <div class="grid-item grid-item-bar">
-    <app-card-bar title="Classement des catégories"></app-card-bar>
+    <app-card-bar
+      [barChartData]="barChartData"
+      [barChartLabels]="barChartLabels"
+      title="Classement des catégories"
+    ></app-card-bar>
   </div>
   <div class="grid-item grid-item-mean">
     <app-card-mean

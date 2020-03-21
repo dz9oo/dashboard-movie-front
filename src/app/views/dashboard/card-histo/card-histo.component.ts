@@ -10,9 +10,9 @@ import { Label } from "ng2-charts";
 })
 export class CardHistoComponent implements OnInit {
   @Input() title: string;
-  @Input() listYearCount: any;
-  @Input() listYear: number[];
-  @Input() countYear: number[];
+  // @Input() listYearCount: any;
+  // @Input() listYear: number[];
+  // @Input() countYear: number[];
   @Input() barChartData = [];
   @Input() barChartLabels = [];
 
